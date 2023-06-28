@@ -28,6 +28,7 @@ class Sign_In_Page(Basepage):
         pwd_input.send_keys(Keys.BACKSPACE)
 
     def click_login_button(self):
+        self.wait_for_elem(*self.LOGIN_BUTTON)
         self.chrome.find_element(*self.LOGIN_BUTTON).click()
 
     def click_fogot_pwd_link(self):
@@ -61,12 +62,6 @@ class Sign_In_Page(Basepage):
     #     expected = "Please enter a valid email address!"
     #     self.assertEqual(expected, actual, 'The message of the page is incorrect.')
 
-
-
-    def check_current_url(self):
-        actual_url = self.chrome.current_url
-        expected_url = 'https://jules.app/sign-in'
-        self.assertEqual(actual_url,expected_url, "The URL doesn't match.")
 
 
 
