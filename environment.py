@@ -11,6 +11,7 @@ from pages.download_app_page import Download_App_Page
 from pages.terms_and_conditions_page import Terms_And_Conditions
 from pages.download_app_for_apple_pages import Download_App_For_Apple
 from pages.faq_page import Faq
+from pages.privacy_policy_page import Privacy_Policy
 
 
 def before_all(context):
@@ -22,6 +23,7 @@ def before_all(context):
     context.terms_and_conditions = Terms_And_Conditions()
     context.download_app_for_apple = Download_App_For_Apple()
     context.faq = Faq()
+    context.privacy_policy = Privacy_Policy()
 
 
 def after_all(context):
