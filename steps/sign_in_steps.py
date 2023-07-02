@@ -37,6 +37,8 @@ def step_impl(context):
 def step_impl(context):
     context.sign_in_page.check_current_url()
 
-
+@Then('sign_in: The user is redirected to the julesapp homepage "{homepage}"')
+def step_impl(context, homepage):
+    context.sign_in_page.check_current_url(homepage)
 
 
